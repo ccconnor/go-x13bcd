@@ -11,4 +11,7 @@ func TestX13(t *testing.T) {
 	x13hash := HashX13sm3(blockHeader)
 	hash := hex.EncodeToString(x13hash[:])
 	fmt.Println(hash)
+	if hash != "c5946f83ed0c9080262837628cd39f49ab87eb05c9e2d9e6080b000000000000" {
+		t.Errorf("test failed!")
+	}
 }
